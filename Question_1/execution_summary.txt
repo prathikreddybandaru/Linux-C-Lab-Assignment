@@ -1,0 +1,4 @@
+--- Submission Processing Summary ---
+Total submissions scanned: 3
+Total duplicates found: 1
+Total unique backups created: 2
