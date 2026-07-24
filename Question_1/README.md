@@ -1,0 +1,4 @@
+Question 1 Explanation:
+Duplicate Detection: Instead of basic commands, I utilized sha256sum to generate a secure cryptographic hash of each file's exact contents. I stored these hashes in an associative array (declare -A content_tracker) so the script can instantly recognize if a newly scanned file matches a hash it has already seen.
+File Handling: I used mkdir -p to safely generate a unique_backups directory without throwing an error if it already exists. The cp command was used to copy only the first instance of a file into this new directory, leaving the original submissions untouched.
+Redirection and Logging: I implemented exec 2> script_errors.log at the top of the script to automatically route all system errors away from the user's terminal and into a background file. To build the final report, I used the > operator to create the text file and the >> append operator to add the final variable counts line by line.
