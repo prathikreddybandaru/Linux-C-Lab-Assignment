@@ -1,0 +1,11 @@
+[System] Initializing Secure File Processing Utility...
+[+] Database created. 3 employee records securely written.
+[*] Retrieved Record -> ID: 2 | Name: Bob Jones | Salary: $62000.00
+[*] Processing raise for Bob Jones to $66500.00...
+[+] Record successfully updated in-place via lseek().
+
+--- Final Database State ---
+ID: 1 | Name: Alice Smith     | Salary: $55000.00
+ID: 2 | Name: Bob Jones       | Salary: $66500.00
+ID: 3 | Name: Charlie Brown   | Salary: $71000.00
+[System] Operations complete. File descriptor safely closed.
