@@ -1,0 +1,16 @@
+==================================================
+        VI CRASH RECOVERY EVALUATION
+==================================================
+
+[1] EVALUATION OF MECHANISMS:
+- Undo History & Registers: Stored in volatile memory (RAM). Completely lost during a hard system crash.
+- Backup Files (*~): Only saves the file's state from BEFORE the editing session began. Useful for reverting, but useless for recovering new, unsaved work.
+- Swap Files (.swp): A hidden file created by vi that periodically flushes buffer changes directly to the disk in real-time while you type.
+
+[2] PROPOSED STRATEGY:
+The most reliable recovery strategy is utilizing the Swap File via the recovery flag:
+Command: vi -r filename.conf
+
+[3] JUSTIFICATION:
+Because the swap file continuously writes incremental changes to non-volatile disk storage during the active session, it is the ONLY mechanism capable of restoring the unsaved keystrokes made immediately prior to the crash.
+==================================================
